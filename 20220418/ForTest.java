@@ -44,6 +44,36 @@ public class ForTest {
 		e = ++d + ++d + ++d + ++d;
 		System.out.println("d: " + d + ", e: " + e);
 		
+		// 기출
+		int w = 3, x = 4, y = 3, z = 5;
+		
+		System.out.println("w == 2 | w == y: " + (w == 2 | w == y)); // true
+		System.out.println("!(y > z): " + !(y > z)); // true
+		System.out.println("1 == x ^ y != z: " + (1 == x ^ y != z)); // true
+		System.out.println("7 == x ^ y != w: " + (7 == x ^ y != w)); // true
+		
+		if ((w == 2 | w == y) & !(y > z) & (1 == x ^ y != z)) {
+			
+			w = x + y; // 7
+			
+			if (7 == x ^ y != w) {
+				System.out.println(w); // 7
+			} else {
+				System.out.println(x); // 4
+			}
+			
+		} else {
+			
+			w = y + z;
+			
+			if (7 == y ^ z != y) {
+				System.out.println(w); // 8
+			} else {
+				System.out.println(z); // 5
+			}
+			
+		}
+		
 	}
 	
 }
